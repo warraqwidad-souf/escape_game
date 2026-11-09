@@ -1,0 +1,29 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.manoir.horloger'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.manoir.horloger'
+        minSdk 23
+        // 34 : évite l'affichage bord à bord imposé à partir de 35.
+        // Passez à 35 (et gérez les marges système) avant une publication sur Google Play.
+        targetSdk 34
+        versionCode 1
+        versionName '1.0'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
